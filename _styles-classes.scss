@@ -1,0 +1,129 @@
+@import 'vars';
+@import 'mixins';
+@import 'animations';
+
+/* This defines styles. The bulk of things are stores here. */
+
+/* Gradients and related stuff */
+
+.live-grad {
+    animation: move 40s ease infinite;
+}
+
+.bg-coregrad {
+    @include bg-lin-grad(45deg, $bg-color, lighten($bg-color, 30%));
+}
+
+.bg-grad1 {
+    @include bg-lin-grad(45deg, $gradient1-start, $gradient1-end);
+}
+/* Feel free to comment out the below if you only use 1 gradient. */
+
+.bg-grad2 {
+    @include bg-lin-grad(45deg, $gradient2-start, $gradient2-end);
+}
+
+/* Classes that are actuallyclasses. */
+
+.head {
+    @extend .large;
+    @extend .light;
+    font-weight: bold;
+}
+
+/* Utility classes */
+
+.padded {
+    @include pad-all(15px);
+}
+
+.marged{
+    @include marg-all(15px);
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.card {
+    @include dark-box-shadow(4px, 8px);
+    :hover {
+        @include dark-box-shadow(8px, 16px);
+    }
+    transition: 0.3s;
+}
+
+.mid {
+    @extend .flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.wide {
+    letter-spacing: 5px;
+}
+
+.large {
+    font-size: $text-large;
+}
+
+.larger {
+    font-size: $text-large * 2;
+}
+
+.too-large{
+    font-size: $text-large * 5;
+}
+
+.light {
+    color: lighten($text, 25%);
+}
+
+.base-col {
+    color: $text;
+}
+
+.dark {
+    color: darken($text, 25%);
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.w200px {
+    @extend .flex;
+    width: 200px;
+}
+
+.w100p {
+    @extend .flex;
+    width: 100%;
+}
+
+
+/* Animation classes */
+
+.fadein {
+    @extend .hidden;
+    animation: fadein 1s;
+    animation-fill-mode: forwards;
+    &.one {
+        animation-delay: $base-delay;
+    }
+    &.two {
+        animation-delay: $base-delay * 2;
+    }
+    &.three {
+        animation-delay: $base-delay * 3;
+    }
+}

@@ -1,0 +1,30 @@
+/* Editing this stylesheet allows you to quickly change the colors used globally in the stylesheet. 
+   It should allow for easy, color customisations.
+   It's imported into most of the SCSS stylesheets.
+   It also contains things like the font-stack.
+*/
+
+$font-stack: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
+$bg-color: #250A16;
+$text: #f8f8f8;
+
+$accent-1: #430D24;
+$accent-2: #8B1C2B;
+$accent-3: #CD8417;
+
+$text-default: 16px;
+$text-large: 1.5em;
+
+/* Gradients. */
+
+$gradient1-start: #ED213A;
+$gradient1-end: #93291E;
+
+/* If you don't use more than 1 gradient, then you can comment/cut out the rest. */
+
+$gradient2-start: #ee0979;
+$gradient2-end: #ff6a00;
+
+/* Animations */
+
+$base-delay: 0.4s;

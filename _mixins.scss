@@ -1,0 +1,29 @@
+@import 'vars';
+
+@mixin bg-lin-grad($deg, $col1, $col2) {
+    background-image: linear-gradient($deg, $col1, $col2);
+}
+
+@mixin dark-box-shadow($length1, $length2) {
+    box-shadow: 0 $length1 + px $length2 + px 0 rgba(0,0,0,0.2);   
+}
+
+@mixin pad-all($amt) {
+    padding-top: $amt;
+    padding-right: $amt;
+    padding-bottom: $amt;
+    padding-left: $amt;
+}
+
+
+@mixin marg-all($amt) {
+    margin-top: $amt;
+    margin-right: $amt;
+    margin-bottom: $amt;
+    margin-left: $amt;
+}
+
+@mixin flex {
+    display: -webkit-flex;
+    display: flex;
+}

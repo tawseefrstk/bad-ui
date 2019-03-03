@@ -1,0 +1,66 @@
+@import 'vars';
+@import 'mixins';
+@import 'animations';
+
+/* This defines styles. The bulk of things are stores here. */
+
+html {
+    height: 100%;
+}
+
+body {
+    /* Feel free to comment it out if you get issues. */
+    display: block;
+    
+    /* Colors are importand for a reason.*/
+    font-family: $font-stack;
+    color: $text;
+
+    /* Static background */
+    background: $bg-color;
+    
+    /* Standardisation. */
+
+    font-size: $text-default;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    height: 100%;
+
+    /* Gradients */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 200% 200%;
+}
+
+break {
+    /* Hacky flexbox breaks. */
+
+    width:0;
+    height:0;
+    overflow:hidden;
+    flex-basis: 100%
+}
+
+a {
+    color: lighten($text, 10%);
+    transition: 0.5s;
+    text-decoration: none;
+    &:hover {
+        color: darken($text, 5%);
+    }
+}
+
+header, footer {
+    @include flex;
+    width: 100%;
+    height: 100px;
+    &.pico {
+        height: $text-default * 1.5;
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
