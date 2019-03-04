@@ -100,16 +100,16 @@
     opacity: 0;
 }
 
-.w200px {
-    @extend .flex;
+.w200 {
+    flex-basis: 200px;
     width: 200px;
 }
 
-.w100p {
-    @extend .flex;
-    width: 100%;
+.h-br {
+    height: 0;
+    width: 1px;
+    background: rgba(0, 0, 0, 0);
 }
-
 
 /* Animation classes */
 
