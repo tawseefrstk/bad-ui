@@ -5,7 +5,7 @@
 }
 
 @mixin dark-box-shadow($length1, $length2) {
-    box-shadow: 0 $length1 + px $length2 + px 0 rgba(0,0,0,0.2);   
+    box-shadow: 0 $length1 $length2 0 rgba(0,0,0,0.2);   
 }
 
 @mixin pad-all($amt) {

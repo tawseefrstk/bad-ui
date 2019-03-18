@@ -47,7 +47,7 @@
 
 .card {
     @include dark-box-shadow(4px, 8px);
-    :hover {
+    &:hover {
         @include dark-box-shadow(8px, 16px);
     }
     transition: 0.3s;
@@ -109,6 +109,10 @@
     height: 0;
     width: 1px;
     background: rgba(0, 0, 0, 0);
+}
+
+.footer-fa {
+    margin-right: 10px;
 }
 
 /* Animation classes */

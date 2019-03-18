@@ -63,4 +63,11 @@ header, footer {
 footer {
     position: fixed;
     bottom: 0;
+    padding: 5px;
+}
+
+code {
+    font-family: monospace;
+    background: lighten($bg-color, 10%);
+    color: darken($text, 10%)
 }
