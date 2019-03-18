@@ -5,6 +5,7 @@
 /* This defines styles. The bulk of things are stores here. */
 
 html {
+    scroll-behavior: smooth;
     height: 100%;
 }
 
@@ -42,7 +43,7 @@ break {
 }
 
 a {
-    color: lighten($text, 10%);
+    color: lighten($text, 15%);
     transition: 0.5s;
     text-decoration: none;
     &:hover {
@@ -70,4 +71,65 @@ code {
     font-family: monospace;
     background: lighten($bg-color, 10%);
     color: darken($text, 10%)
+}
+
+/* Headers */
+
+h1 {
+    @include header(2.5);
+}
+
+h2 {
+    @include header(2.25);
+}
+
+h3 {
+    @include header(2);
+}
+
+h4 {
+    @include header(1.75);
+}
+
+h5 {
+    @include header(1.5);
+}
+
+h6 {
+    @include header(1.25);
+}
+
+/* HR tag. */
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid $accent-1;
+    border-bottom: 1px solid $accent-1;
+}
+
+/* Inputs. */
+
+input[type=text], input[type=password] {
+    @include pad-all(5px);
+    background: $accent-1;
+    border: 1px solid $accent-2;
+    border-radius: 5px;
+    transition: 0.3s;
+    &:focus {
+        background: darken($accent-1, 5%);
+        border: 1px solid darken($accent-2, 10%);
+    }
+}
+
+input[type=submit], input[type=reset] {
+    @include pad-all(5px);
+    background: lighten($accent-1, 10%);
+    border: 1px solid lighten($accent-2, 10%);
+    border-radius: 5px;
+    transition: 0.3s;
+    &:focus {
+        background: $accent-1;
+        border: 1px solid darken($accent-2, 3%);
+    }
 }

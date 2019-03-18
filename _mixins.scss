@@ -27,3 +27,13 @@
     display: -webkit-flex;
     display: flex;
 }
+
+@mixin header($multiplier) {
+    display: block;
+    margin-top: $text-default * 0.3;
+    margin-bottom: $text-default * 0.3;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-size: $text-default * $multiplier;
+}
