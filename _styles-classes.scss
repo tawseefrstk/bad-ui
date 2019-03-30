@@ -47,6 +47,7 @@
 
 .card {
     @include dark-box-shadow(4px, 8px);
+    @extend .clear-load;
     &:hover {
         @include dark-box-shadow(8px, 16px);
     }
@@ -130,4 +131,11 @@
     &.three {
         animation-delay: $base-delay * 3;
     }
+}
+
+/* The JS is needed for the following classes to work. */
+
+
+.clear-load {
+    transition: none !important;
 }
